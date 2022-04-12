@@ -1,0 +1,19 @@
+{
+  "name": "landing-page-practice",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production node ./src/build.js",
+    "dev": "cross-env NODE_ENV=development nodemon ./src/server.js -e js,pug"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2",
+    "reload": "^3.2.0"
+  }
+}
