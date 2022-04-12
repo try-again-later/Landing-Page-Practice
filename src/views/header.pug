@@ -1,0 +1,47 @@
+- const pageNavbarId = 'pageNavbarId'
+
+mixin nav-link-item(link, title)
+  li(class = ['nav-item'])
+    a(class = ['nav-link'] href = link)= title
+
+mixin nav-active-link-item(link, title)
+  li(class = ['nav-item'])
+    a(class = ['nav-link', 'active'] href = link aria-current = 'page')= title
+
+header(class = ['position-relative'])
+  h1(class = ['visually-hidden']) Landing Page Practice
+
+  img(
+    src = `${urlBase}/img/hero.png`
+    alt = ''
+    aria-hidden = 'true'
+    class = ['position-absolute', 'top-0', 'd-none', 'd-lg-block']
+    style = {
+      'width': '100%',
+      'height': '60vh',
+      'object-fit': 'cover',
+      'z-index': '-1',
+    }
+  )
+
+  nav(class = ['navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light'])
+    div(class = ['container-lg'])
+      a(class = ['navbar-brand', 'fw-bold'] href = '#') Relvise
+
+      button(
+        class = ['navbar-toggler']
+        type = 'button'
+        data-bs-toggle = 'collapse'
+        data-bs-target = `#${pageNavbarId}`
+        aria-controls = pageNavbarId
+        aria-expanded = 'false'
+        aria-label = 'Toggle page navigation'
+      )
+        i(class = ['bi', 'bi-list'])
+
+      div(class = ['collapse', 'navbar-collapse', 'offset-0', 'offset-lg-1'] id = pageNavbarId)
+        ul(class = ['navbar-nav'])
+          +nav-active-link-item('#', 'Home')
+          +nav-link-item('#', 'Product')
+          +nav-link-item('#', 'Pricing')
+          +nav-link-item('#', 'Contact')

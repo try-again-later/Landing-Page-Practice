@@ -1,0 +1,44 @@
+mixin hero-button(link, title, buttonType)
+  a(
+    href = link
+    class = ['btn', 'fw-bold', 'rounded-pill', 'px-3', 'py-2', buttonType]
+  )= title
+
+mixin hero-card(title, text, icon)
+  article(class = ['card', attributes.class])
+    div(class = ['card-body', 'vstack', 'gap-2'])
+      i(class = ['bi', `bi-${icon}`, 'fs-1'])
+      h3(class = ['card-title', 'fw-bold'])= title
+      p(class = ['card-text'])= text
+
+section(class = ['row', 'py-3', 'py-lg-5'])
+  div(class = ['col-12', 'col-lg-5'])
+    h2(class = ['display-5', 'fw-bold', 'mb-4']) Finance and Consultancy Solution
+
+    p(class = ['text-muted'])
+      | We know ow large objects will act,
+      br(class = ['d-none', 'd-lg-block'])
+      | but things on a small scale.
+
+    div(class = ['d-flex', 'flex-wrap', 'gap-3'])
+      +hero-button('#', 'Get Quote Now', 'btn-primary')
+      +hero-button('#', 'Learn More', 'btn-outline-secondary')
+
+section
+  h2(class = ['visually-hidden']) Features
+  div(class = ['row', 'gap-3', 'gap-lg-5', 'justify-content-center', 'p-3'])
+    +hero-card(
+      'Environmental Consulting',
+      'We focus on ergonomics and meeting you where you work.',
+      'briefcase'
+    )(class = ['col-lg-3'])
+    +hero-card(
+      'Finance and consultancy',
+      'Just type what\'s on your mind and we\'ll get you there.',
+      'shop-window'
+    )(class = ['col-lg-3'])
+    +hero-card(
+      'Financial Services Consulting',
+      'The quick fox jumps over the lazy dog.',
+      'newspaper'
+    )(class = ['col-lg-3', 'text-white', 'bg-primary'])

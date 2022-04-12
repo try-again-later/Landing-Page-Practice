@@ -1,3 +1,5 @@
+- const urlBase = '/Landing-Page-Practice'
+
 doctype html
 html
   head
@@ -16,8 +18,11 @@ html
       rel = 'stylesheet'
     )
 
-  body(class = ['bg-light'])
-    h1 Landing Page Practice
+  body(class = ['bg-white'])
+    include header.pug
+
+    main(class = ['container-lg'])
+      include hero.pug
 
     script(
       src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
