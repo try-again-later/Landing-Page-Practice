@@ -1,0 +1,19 @@
+mixin better-experience-card(title, content, icon)
+  div(class = ['bg-white', 'px-4', 'py-3', 'd-flex', 'flex-column', 'flex-grow-1'])
+    dt(class = ['fw-normal', 'text-muted', 'text-center', 'fs-3', 'order-3'])= title
+    dd(class = ['text-center', 'fw-bold', 'fs-1', 'order-2', 'mb-0'])= content
+    i(class = ['bi', `bi-${icon}`, 'fs-1', 'd-block', 'text-center', 'text-primary', 'order-1'])
+
+
+div(class = ['bg-light'])
+  section(class = ['container-lg', 'py-5'])
+    h2(class = ['text-center', 'fw-bold', 'mb-3']) Designing Better Experience
+    p(class = ['text-center', 'text-muted', 'mb-3', 'mb-lg-5'])
+      | Problems trying to resolve the conflict between the two major realms
+      br(class = ['d-none', 'd-lg-block'])
+      | of classical physics: Newtonian mechanics
+    dl(class = ['d-flex', 'flex-wrap', 'gap-4', 'justify-content-center', 'flex-column', 'flex-lg-row'])
+      +better-experience-card('Consumer products', '972+', 'people')
+      +better-experience-card('Financial Services', '181+', 'graph-up-arrow')
+      +better-experience-card('Environmental', '98%', 'award')
+      +better-experience-card('Business & Finance', '746+', 'briefcase')
