@@ -9,3 +9,10 @@
     max-width: 17.5rem;
   }
 }
+
+@media (min-width: 992px) {
+  .get-in-touch-card_larger {
+    transform: scale(1.15);
+    z-index: 1;
+  }
+}
