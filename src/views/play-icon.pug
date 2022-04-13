@@ -1,0 +1,27 @@
+mixin play-icon()
+  div(
+    class = [
+      attributes.class,
+      'bg-primary', 'rounded-circle',
+    ]
+    style = {
+      width: 'clamp(3rem, 10vw, 5rem)',
+      height: 'clamp(3rem, 10vw, 5rem)',
+      'box-sizing': 'content-box',
+      display: 'grid',
+      'place-items': 'center',
+    }
+  )
+    i(
+      class = [
+        'bi', 'bi-play-fill',
+        'text-white',
+      ]
+      style = {
+        'font-size': 'clamp(2rem, 7.5vw, 4rem)',
+        width: 'clamp(2rem, 7.5vw, 4rem)',
+        height: 'clamp(2rem, 7.5vw, 4rem)',
+        display: 'grid',
+        'place-items': 'center',
+      }
+    )

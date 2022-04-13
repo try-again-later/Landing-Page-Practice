@@ -1,0 +1,23 @@
+include play-icon.pug
+
+mixin video-card()
+  article(class = [attributes.class, 'position-relative', 'p-0'])
+    h3(class = ['visually-hidden']) Promo video
+
+    a(href = '#' class = ['stretched-link'])
+      span(class = ['visually-hidden']) Watch video
+
+    img(
+      src = `${urlBase}/img/who-we-are.jpg`
+      alt = ''
+      aria-hidden = true
+      style = {
+        'width': '100%',
+        'max-height': '30rem',
+        'object-fit': 'cover',
+      }
+    )
+
+    +play-icon(class = ['position-absolute', 'top-50', 'start-50', 'translate-middle'])
+
+    include utils/overlay.pug

@@ -1,0 +1,38 @@
+include utils/h2-heading.pug
+include video-card.pug
+
+mixin who-we-are-list-item(title, text, icon)
+  li(class = ['row'])
+    div(class = ['col-auto'])
+      i(class = ['bi', `bi-${icon}`, 'fs-3', 'text-primary'])
+    div(class = ['col'])
+      p(class = ['mb-0']): b= title
+      p(class = ['text-muted'])= text
+
+div(class = ['bg-light'])
+  section(class = ['container-lg', 'py-3', 'py-lg-5'])
+    +h2-heading('Who We Are')
+    p(class = ['text-center', 'text-muted', 'mb-3', 'mb-lg-5'])
+      | Problems trying to resolve the conflict between the two major realms
+      br(class = ['d-none', 'd-lg-block'])
+      | of classical physics: Newtonian mechanics
+
+    div(class = ['row', 'p-3'])
+      +video-card()(class = ['col-lg', 'mb-4', 'mb-lg-0'])
+
+      div(class = ['col-lg', 'px-lg-5'])
+        p(class = ['display-4', 'fw-normal']) Most trusted in our field
+        p(class = ['text-muted'])
+          | Most calendars are designed for teams.
+          | Slate is designed for freelancers who want a simple way to plan their schedule.
+        ul(class = ['list-unstyled'])
+          +who-we-are-list-item(
+            'The quick fox jumps over the lazy dog',
+            'Things on a very small scale...',
+            'people'
+          )
+          +who-we-are-list-item(
+            'The quick fox jumps over the lazy dog',
+            'Things on a very small scale...',
+            'speedometer'
+          )

@@ -7,9 +7,11 @@ mixin practice-advice-card(title, text, image)
       p(class = ['card-text', 'text-muted'])
         | Newton thought that light was made up of particles,
         | but then it was discovered
-      a(href="#" class="btn btn-primary stretched-link") Try this out
+      a(href = '#' class = 'btn btn-primary stretched-link') Try this out
     img(
       src = `${urlBase}/img/${image}`
+      alt = ''
+      aria-hidden = 'true'
     )
 
 -
