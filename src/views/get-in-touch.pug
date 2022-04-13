@@ -1,0 +1,37 @@
+include utils/h2-heading.pug
+
+mixin get-in-touch-card(emails, icon, color = 'primary')
+  article(class = ['card', attributes.class])&attributes(attributes)
+    div(class = ['card-body', 'd-flex', 'flex-column', 'align-items-center', 'py-4', 'gap-3'])
+      h3(class = ['card-title', 'mb-0', 'order-3', 'fs-5']) Get support
+      div(class = ['vstack', 'text-center', 'order-2'])
+        each email in emails
+          a(class = [`text-${color}`] href = `mailto:${email}`)= email
+      a(class = ['btn', `btn-outline-${color}`, 'order-4'] href = '#') Submit request
+      i(class = ['bi', `bi-${icon}`, 'order-1'] style = { 'font-size': '4rem' })
+
+div(class = ['bg-white'])
+  section(class = ['container-lg', 'py-3', 'py-lg-5'])
+    +h2-heading('Get in touch')
+    p(class = ['text-center', 'text-muted', 'mb-3', 'mb-lg-5'])
+      | Problems trying to resolve the conflict between the two major realms
+      br(class = ['d-none', 'd-lg-block'])
+      | of classical physics: Newtonian mechanics
+    div(class = ['container-fluid', 'mb-5'] style = {'max-width': '60rem' })
+      ul(class = ['list-unstyled', 'mb-0', 'row', 'g-0'])
+        li(class = ['col-4'])
+          +get-in-touch-card(
+            ['georgia.young@example.com', 'georgia.young@ple.com'],
+            'telephone'
+          )
+        li(class = ['col-4'])
+          +get-in-touch-card(
+            ['georgia.young@example.com', 'georgia.young@ple.com'],
+            'geo-alt',
+            'light'
+          )(class = ['bg-primary', 'text-white'] style = { 'transform': 'scale(1.15)', 'z-index': '1' })
+        li(class = ['col-4'])
+          +get-in-touch-card(
+            ['georgia.young@example.com', 'georgia.young@ple.com'],
+            'send'
+          )
