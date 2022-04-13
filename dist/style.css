@@ -1,5 +1,11 @@
 @media (min-width: 576px) {
   .practice-advice-list-item {
+    width: 17.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .practice-advice-list-item {
     max-width: 17.5rem;
   }
 }

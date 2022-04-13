@@ -1,0 +1,22 @@
+div(class = ['bg-light', 'd-flex', 'align-items-center', 'flex-column'])
+  div(class = ['container-lg'] style = { 'max-width': '60rem' })
+    section(
+      class = ['bg-primary', 'text-white', 'p-4', 'row', 'align-items-center']
+      style = {
+        'transform': 'translateY(2.5rem)',
+      }
+    )
+      h2(class = ['col-lg-4']) Subscribe for latest newsletter
+      form(class = ['col-lg-8'])
+        div(class = ['input-group'])
+          input(
+            type = 'text'
+            class = ['form-control']
+            placeholder = 'Your email'
+            aria-label = 'Your email'
+          )
+          button(
+            type = 'submit'
+            class = ['btn', 'btn-info', 'text-white', 'fw-bold']
+          ) Subscribe
+  div(class = ['bg-secondary'] style = { height: '4rem', width: '100%' })

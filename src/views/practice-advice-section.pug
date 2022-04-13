@@ -1,7 +1,7 @@
 include utils/h2-heading.pug
 
 mixin practice-advice-card(title, text, image)
-  article(class = ['card'])
+  article(class = ['card', attributes.class])
     div(class = ['card-body'])
       h3(class = ['card-title'])= title
       p(class = ['card-text', 'text-muted'])
@@ -48,8 +48,8 @@ div(class = ['bg-white'])
 
     ul(class = [
       'list-unstyled', 'mb-0',
-      'd-flex', 'flex-wrap', 'gap-4', 'justify-content-center', 'align-items-center',
+      'd-flex', 'flex-wrap', 'gap-4', 'justify-content-center',
     ])
       each advice in practiceAdviceList
         li(class = ['practice-advice-list-item', 'flex-grow-1'])
-          +practice-advice-card(advice.title, advice.text, advice.image)
+          +practice-advice-card(advice.title, advice.text, advice.image)(class = ['h-100'])
