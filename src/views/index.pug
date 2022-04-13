@@ -18,12 +18,18 @@ html
       rel = 'stylesheet'
     )
 
+    link(
+      href = `${urlBase}/style.css`
+      rel = 'stylesheet'
+    )
+
   body(class = ['bg-white'])
     include header.pug
 
     main
       include hero.pug
       include better-experience-section.pug
+      include practice-advice-section.pug
 
     script(
       src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'

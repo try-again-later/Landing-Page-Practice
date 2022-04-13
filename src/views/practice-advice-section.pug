@@ -1,0 +1,53 @@
+include utils/h2-heading.pug
+
+mixin practice-advice-card(title, text, image)
+  article(class = ['card'])
+    div(class = ['card-body'])
+      h3(class = ['card-title'])= title
+      p(class = ['card-text', 'text-muted'])
+        | Newton thought that light was made up of particles,
+        | but then it was discovered
+      a(href="#" class="btn btn-primary stretched-link") Try this out
+    img(
+      src = `${urlBase}/img/${image}`
+    )
+
+-
+  const practiceAdviceList = [
+    {
+      title: 'A single source of truth',
+      text: 'Newton thought that light was made up of particles, but then it was discovered.',
+      image: 'practice-advice-1.png'
+    },
+    {
+      title: 'Fastest way to organize',
+      text: '“Quantum mechanics” is the description of the behaviour of matter.',
+      image: 'practice-advice-2.png'
+    },
+    {
+      title: 'Fastest way to take action',
+      text: 'They describe a universe consisting of bodies moving.',
+      image: 'practice-advice-3.png'
+    },
+    {
+      title: 'Work better together',
+      text: 'They finally obtained a consistent description of the behaviour.',
+      image: 'practice-advice-4.png'
+    },
+  ];
+
+div(class = ['bg-white'])
+  section(class = ['container-lg', 'py-3', 'py-lg-5'])
+    +h2-heading('Practice Advice')
+    p(class = ['text-center', 'text-muted', 'mb-3', 'mb-lg-5'])
+      | Problems trying to resolve the conflict between the two major realms
+      br(class = ['d-none', 'd-lg-block'])
+      | of classical physics: Newtonian mechanics
+
+    ul(class = [
+      'list-unstyled', 'mb-0',
+      'd-flex', 'flex-wrap', 'gap-4', 'justify-content-center', 'align-items-center',
+    ])
+      each advice in practiceAdviceList
+        li(class = ['practice-advice-list-item', 'flex-grow-1'])
+          +practice-advice-card(advice.title, advice.text, advice.image)

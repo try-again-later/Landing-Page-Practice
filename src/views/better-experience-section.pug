@@ -1,3 +1,5 @@
+include utils/h2-heading.pug
+
 mixin better-experience-card(title, content, icon)
   div(class = ['bg-white', 'px-4', 'py-3', 'd-flex', 'flex-column', 'flex-grow-1'])
     dt(class = ['fw-normal', 'text-muted', 'text-center', 'fs-3', 'order-3'])= title
@@ -6,8 +8,8 @@ mixin better-experience-card(title, content, icon)
 
 
 div(class = ['bg-light'])
-  section(class = ['container-lg', 'py-5'])
-    h2(class = ['text-center', 'fw-bold', 'mb-3']) Designing Better Experience
+  section(class = ['container-lg', 'py-3', 'py-lg-5'])
+    +h2-heading('Designing Better Experience')
     p(class = ['text-center', 'text-muted', 'mb-3', 'mb-lg-5'])
       | Problems trying to resolve the conflict between the two major realms
       br(class = ['d-none', 'd-lg-block'])
