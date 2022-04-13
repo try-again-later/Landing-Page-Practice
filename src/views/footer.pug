@@ -1,0 +1,65 @@
+mixin footer-links-list(title, links)
+  h3(class = ['fs-5', 'mb-3'])= title
+  ul(class = ['list-unstyled'])
+    each link in links
+      li: a(href = '#' class = ['text-light'])= link
+
+div(class = ['bg-light'])
+  section(class = ['container-lg', 'p-4', 'px-lg-0', 'py-lg-5'])
+    div(class = ['row'])
+      div(class = ['col'])
+        h2 Consulting Agency for your business
+        p The quick fox jumps over the lazy dog
+      div(class = ['col-auto', 'd-flex', 'align-items-center'])
+        a(href = '#' class = ['btn', 'btn-primary', 'py-lg-3', 'px-lg-4', 'fs-4']) Contact us
+
+div(class = ['bg-secondary', 'text-white'])
+  section(class = ['container-lg', 'p-4', 'px-lg-0', 'py-lg-5', 'text-center', 'text-sm-start'])
+    h2(class = ['visually-hidden']) Links
+    div(class = ['row', 'gy-3'])
+      div(class = ['col-sm-4', 'col-lg'])
+        +footer-links-list('Company Info', ['About us', 'Carrier', 'We are hiring', 'Blog'])
+
+      div(class = ['col-sm-4', 'col-lg'])
+        +footer-links-list('Legal', ['About us', 'Carrier', 'We are hiring', 'Blog'])
+
+      div(class = ['col-sm-4', 'col-lg'])
+        +footer-links-list(
+          'Features', ['Business marketing', 'User analytic', 'Live chat', 'Unlimited support']
+        )
+
+      div(class = ['col-sm-4', 'col-lg'])
+        +footer-links-list('Resources', ['IOS & Android', 'Watch a demo', 'Customers', 'API'])
+
+      div(class = ['col-sm-4', 'col-lg'])
+        h3(class = ['fs-5', 'mb-3']) Get in touch
+        ul(class = ['list-unstyled', 'd-flex', 'flex-column', 'gap-2'])
+          li
+            i(class = ['bi', 'bi-telephone'])
+            | #{' '}
+            a(href = 'tel:(480) 555-0103' class = ['text-light']) (480) 555-0103
+          li
+            i(class = ['bi', 'bi-geo-alt'])
+            | #{' '}
+            | 4517 Washington Ave. Manchester, Kentucky 39495
+          li
+            i(class = ['bi', 'bi-send'])
+            | #{' '}
+            a(href = 'mailto:debra.holt@example.com' class = ['text-light']) debra.holt@example.com
+
+mixin social-link(title, link, icon)
+  a(href = link)
+    i(class = ['bi', `bi-${icon}`])
+    span(class = ['visually-hidden'])= title
+
+div(class = ['bg-light'])
+  section(class = ['container-lg', 'px-4', 'px-lg-0', 'py-3'])
+    div(class = ['row', 'gy-3'])
+      div(class = ['col'])
+        p(class = ['mb-0', 'text-muted']) Made with love by Figmaland, all rights reserved.
+      div(class = ['col-auto'])
+        ul(class = ['list-unstyled', 'mb-0', 'fs-4', 'd-flex', 'gap-3'])
+          li: +social-link('Facebook group', '#', 'facebook')
+          li: +social-link('Instagram page', '#', 'instagram')
+          li: +social-link('Twitter account', '#', 'twitter')
+          li: +social-link('Youtube channel', '#', 'youtube')

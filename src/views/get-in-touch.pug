@@ -17,20 +17,20 @@ div(class = ['bg-white'])
       | Problems trying to resolve the conflict between the two major realms
       br(class = ['d-none', 'd-lg-block'])
       | of classical physics: Newtonian mechanics
-    div(class = ['container-fluid', 'mb-5'] style = {'max-width': '60rem' })
+    div(class = ['container-fluid', 'mb-lg-5'] style = {'max-width': '55rem' })
       ul(class = ['list-unstyled', 'mb-0', 'row', 'g-0'])
-        li(class = ['col-4'])
+        li(class = ['col-md-4'])
           +get-in-touch-card(
             ['georgia.young@example.com', 'georgia.young@ple.com'],
             'telephone'
           )
-        li(class = ['col-4'])
+        li(class = ['col-md-4'])
           +get-in-touch-card(
             ['georgia.young@example.com', 'georgia.young@ple.com'],
             'geo-alt',
             'light'
-          )(class = ['bg-primary', 'text-white'] style = { 'transform': 'scale(1.15)', 'z-index': '1' })
-        li(class = ['col-4'])
+          )(class = ['bg-primary', 'text-white', 'get-in-touch-card_larger'])
+        li(class = ['col-md-4'])
           +get-in-touch-card(
             ['georgia.young@example.com', 'georgia.young@ple.com'],
             'send'
