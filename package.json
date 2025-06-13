@@ -11,9 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "express": "^4.17.3",
-    "nodemon": "^2.0.15",
-    "pug": "^3.0.2",
-    "reload": "^3.2.0"
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "pug": "^3.0.3",
+    "reload": "^3.3.0"
   }
 }
